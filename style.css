@@ -1,0 +1,254 @@
+/*author: Jessica Heyle Student ID: R00131139 Email: Jessica#heyle@mycit#ie*/
+/*CIT CHAT FORUM CSS*/
+
+body {
+	width: 900px; /*my screen width is smaller so using this but generally 1280px*/
+	margin: 0px auto; 
+}
+
+nav {
+	font-family : Verdana, Geneva, sans-serif /*set font*/
+}
+
+nav ul
+{
+	text-align : center;
+	margin-top: 30px;
+}
+
+nav li
+{
+	list-style : none;
+	display : inline-block;
+	margin : 0px 0px 0px 40px;
+	color: black;
+	font-family : Helvetica, Arial, sans-serif;
+	font-size: 15px;	
+}
+
+/*flex box for middle*/
+#wrapper{
+	display:flex;
+	justify-content: space-between;
+}
+
+#steps{
+	margin-top: 20px;
+	display:flex;
+	justify-content: space-between;
+}
+
+#step1, #step2, #step3{
+	width: 250px;
+	font-family : Helvetica, Arial, sans-serif;
+}
+
+/*use images as backgrounds and cover remaining space*/
+#img1{
+	background-image: url("images/cit2.jpg");
+	background-size:cover;
+	height: 180px;
+}
+
+#img2{
+	background-image: url("images/cit1.jpg");
+	background-size:cover;
+	height: 180px;
+}
+
+#img3{
+	background-image: url("images/cit4.jpg");
+	background-size:cover;
+	height: 180px;
+}
+
+/*set curved border radius and background colours*/
+.heading {
+	background-color: #7E0207;
+	color: #EDB0A3;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 5px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.step {
+	background-color: #EDB0A3;
+	color: #7E0207;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 5px;
+	text-align: left;
+	height: 50px;
+	font-size: 30px;
+}
+
+#members {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 30px;	
+	font-style: bold;
+	font-family: Arial, sans-serif;
+}
+
+#footer {
+	text-align: center;
+	color: gray;
+	font-size: 15px;
+	margin-top: 30px;
+}
+
+#profile_container {
+	margin-left: 310px;
+}
+
+#profiles
+{
+	display: flex;
+	height: 50px;
+	width: 350px;	
+	opacity: 0.5;
+}
+
+#box {
+	display: flex;
+	overflow: hidden;
+	width: 300px;
+	margin-left: 300px;
+	height: 50px;
+}
+
+#profiles img
+{
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+/*use animation for profile pictures*/
+#profiles{
+    position:absolute;
+	width: 300px;
+    -webkit-animation:linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 10s;
+}     
+@-webkit-keyframes run {
+    0% { left: 380px;}
+    100%{ left : -350px;}
+}
+
+#wrapper1 {
+	width: 40%;
+	overflow: hidden;
+	margin: auto;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	position: relative;
+}
+	
+/* PHONE MODE
+   When the viewport drops below 500px then change as follows
+*/
+@media screen and (max-width : 500px)
+{
+body {
+	width : auto;
+}
+
+/*reverse and change to column*/
+#wrapper{
+	flex-direction: column-reverse;
+	text-align: center;
+}
+
+nav ul
+{
+	background-color: #7E0207;	
+	margin: 0px;
+}
+
+nav li
+{
+	margin : 0px 40px 0px 0px;	
+	color: #EDB0A3; 
+}
+
+/*change to column*/
+#steps {
+	flex-direction: column;
+	width: 200px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+/*remove the images*/
+#img1, #img2, #img3
+{
+	display: none;
+}
+
+#step1, #step2, #step3 {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 200px;
+
+}
+
+#step1, #step2 {
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+}
+
+.heading {
+	background-color: white;
+	font-size: 70%;
+	color: black;
+	height: 30px;
+	font-weight: bold;
+}
+
+.step {
+	background-color: white;
+	font-size: 1.2em;
+	color: gray;
+	text-align: center;
+	height: 30px;
+	font-weight: bold;
+}
+
+#members {
+    font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#wrapper1 {
+	border-top: none;
+	border-bottom: none;
+	margin: 0px auto;
+	width: 100%;
+}
+
+#profiles img
+{
+	border-radius: 25%;
+}
+
+/*remove opacity*/
+#profiles{
+	opacity: 1;
+} 
+
+#footer {
+	margin-top: 30px;
+}
+
+/*change sizing on animation*/
+@-webkit-keyframes run {
+    0% { right: -300px;}
+    100%{ right : 490px;}
+}
+
+}
